@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="Bootstrap/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <title>practica9</title>
+    <script>
+        function navigateToSection() {
+            var select = document.getElementById("navigationSelect");
+            var selectedValue = select.options[select.selectedIndex].value;
+            switch (selectedValue) {
+                case "1":
+                    location.hash = "nosotros";
+                    break;
+                case "2":
+                    location.hash = "galeria";
+                    break;
+                case "3":
+                    location.hash = "contacto";
+                    break;
+                default:
+                    location.hash = "inicio";
+            }
+        }
+    </script>
+</head>
+<body>
+    <select id="navigationSelect" class="form-select" aria-label="Default select example" onchange="navigateToSection()">
+        <option value="0" selected>Inicio</option>
+        <option value="1">Nosotros</option>
+        <option value="2">Galería</option>
+        <option value="3">Contacto</option>
+    </select>
+    <br><br>
+    <article>
+        <div class="container">
+            <!-- Content here -->
+            <h1>Mi página con Bootstrap</h1>
+            <br>
+            <p>Bootstrap es un framework front-end utilizado para desarrollar aplicaciones web y sitios mobile first,
+                o sea, con un layout que se adapta a la pantalla del dispositivo utilizado por el usuario.
+            </p><br>
+    
+            <table class="table table-dark table-hover">
+                <table class="table">
+                    <thead><br>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Paterno</th>
+                        <th scope="col">Materno</th>
+                      </tr>
+                    </thead>
+                    
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>Luis</td>
+                        <td>Ramos</td>
+                        <td>Gómez</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Maria</td>
+                        <td>Castro</td>
+                        <td>Lope</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>Carlos</td>
+                        <td>Sánchez</td>
+                        <td>Díaz</td>
+                      </tr>
+                </tbody>
+            </table>
+            <br><br>
+            <div class="row">
+                <div class="col-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Compiladores</h5>
+                        <br>
+                        <h6 class="card-subtitle mb-2 text-muted">Traducción de código fuente</h6>
+                        <br>
+                        <p class="card-text">Un compilador es un programa que traduce el código fuente escrito en un lenguaje de programación a un código de máquina entendible por la computadora. Este proceso incluye análisis léxico, análisis sintáctico, optimización y generación de código.</p>
+                        <a href="https://es.wikipedia.org/wiki/Compilador" class="card-link">Más sobre Compiladores</a>
+                        <br>
+                        <a href="https://www.geeksforgeeks.org/compiler-design/" class="card-link">Diseño de Compiladores</a>
+                        <br>
+                        <a href="https://www.coursera.org/learn/compiler-theory" class="card-link">Curso de Teoría de Compiladores</a>
+                    </div>
+                </div>
+                <br><br>
+                <div class="col-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Contabilidad</h5>
+                        <br>
+                        <h6 class="card-subtitle mb-2 text-muted">Registro y control financiero</h6>
+                        <br>
+                        <p class="card-text">La contabilidad es una disciplina que se encarga de registrar, clasificar y resumir las transacciones financieras de una organización para ayudar en la toma de decisiones. Los principales estados financieros incluyen el balance general, el estado de resultados y el flujo de efectivo.</p>
+                        <br>
+                        <a href="https://es.wikipedia.org/wiki/Contabilidad" class="card-link">Introducción a la Contabilidad</a>
+                        <br>
+                        <a href="https://www.accountingcoach.com/" class="card-link">Recursos para el Estudio de Contabilidad</a>
+                        <br>
+                        <a href="https://www.coursera.org/learn/financial-accounting" class="card-link">Curso de Contabilidad Financiera</a>
+                    </div>
+                </div>
+                <br><br>
+                <div class="col-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Base de Datos</h5>
+                        <br>
+                        <h6 class="card-subtitle mb-2 text-muted">Almacenamiento y gestión de datos</h6>
+                        <br>
+                        <p class="card-text">Una base de datos es una colección organizada de datos que se almacena y se accede electrónicamente. Los sistemas de gestión de bases de datos (DBMS) permiten crear, leer, actualizar y borrar datos en una base, utilizando lenguajes como SQL.</p>
+                        <br>
+                        <a href="https://es.wikipedia.org/wiki/Base_de_datos" class="card-link">Qué es una Base de Datos</a>
+                        <br> 
+                        <a href="https://www.mysql.com/" class="card-link">MySQL - Sistema de gestión de bases de datos</a>
+                        <br>
+                        <a href="https://www.coursera.org/learn/database-management" class="card-link">Curso de Gestión de Bases de Datos</a>
+                    </div>
+                </div>
+            </div>       
+    </article>
+    <br><br>
+    <!-- Sección de Nosotros -->
+<section id="nosotros" class="py-5">
+    <div class="container">
+        <h2>Nosotros</h2>
+        <br>
+        <p>En esta sección, ofrecemos información sobre Bootstrap, un framework front-end popular para el desarrollo web.</p>
+        <br><br>
+        <h3>¿Qué es Bootstrap?</h3>
+        <br>
+        <p>Bootstrap es un framework de código abierto que permite crear sitios web y aplicaciones responsivas de manera rápida y sencilla. Fue desarrollado por Twitter y es ampliamente utilizado en la industria.</p>
+        <br>
+        <h3>Características Principales:</h3>
+        <ul>
+            <br>
+            <li><strong>Diseño Responsivo:</strong> Permite que las aplicaciones se adapten a diferentes tamaños de pantalla.</li>
+            <br>
+            <li><strong>Componentes Predefinidos:</strong> Incluye una variedad de componentes, como botones, formularios, tablas y tarjetas, que se pueden personalizar fácilmente.</li>
+            <br>
+            <li><strong>Facilidad de Uso:</strong> Ofrece una documentación extensa y ejemplos prácticos que facilitan su aprendizaje y aplicación.</li>
+            <br>
+            <li><strong>Compatible con Navegadores:</strong> Asegura que las aplicaciones funcionen correctamente en todos los navegadores modernos.</li>
+        </ul>
+        <br><br>
+        <h3>Nuestra Misión:</h3>
+        <p>Brindar soluciones tecnológicas innovadoras para mejorar la calidad de vida de nuestros usuarios mediante el uso de herramientas como Bootstrap.</p>
+        <br><br>
+        <h3>Nuestra Visión:</h3>
+        <p>Ser líderes en el desarrollo de tecnología accesible y amigable para todos, fomentando el uso de frameworks que faciliten el desarrollo web.</p>
+        <br><br>
+        <h3>Valores:</h3>
+        <ul>
+            <li>Innovación</li>
+            <br>
+            <li>Compromiso</li>
+            <br>
+            <li>Respeto</li>
+        </ul>
+    </div>
+</section>
+<br><br>
+    <!-- Sección de galería -->
+    <section>
+        <div class="container my-4">
+            <h2>Galería</h2>
+            <br>
+            <div class="row"><br>
+                <div class="col-4">
+                    <br>
+                    <img src="img/landscape1.jpg" class="img-fluid" alt="Paisaje 1">
+                </div><br>
+                <div class="col-4">
+                    <br>
+                    <img src="img/landscape2.jpg" class="img-fluid" alt="Paisaje 2">
+                </div><br>
+                <div class="col-4">
+                    <br>
+                    <img src="img/landscape3.jpg" class="img-fluid" alt="Paisaje 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Sección de Contacto -->
+     <section id="contacto" class="bg-light py-5">
+        <div class="container">
+            <h2>Contacto</h2>
+            <br>
+            <p>Puedes ponerte en contacto con nosotros a través de los siguientes medios:</p>
+            <ul>
+                <br>
+                <li>Email: marlon.gomez31@unach.mx</li>
+                <br>
+                <li>Teléfono: (961)2669546</li>
+                <br>
+                <li>Dirección: Calle central#130,   Berriozabal, chiapas</li>
+                <br>
+            </ul>
+            <form>
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <br><br>
+                    <input type="text" class="form-control" id="name" placeholder="Tu nombre">
+                </div>
+                <div class="form-group">
+                    <br><br>
+                    <label for="email">Correo electrónico:</label>
+                    <br><br>
+                    <input type="email" class="form-control" id="email" placeholder="Tu correo">
+                </div>
+                <div class="form-group">
+                    <br><br>
+                    <label for="message">Mensaje:</label>
+                    <br><br>
+                    <textarea class="form-control" id="message" rows="3" placeholder="Tu mensaje"></textarea>
+                </div><br>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section><br><br>
+
+    <!-- Sección de video -->
+    <section>
+        <div class="container my-4">
+            <h2>Video</h2>
+            <br>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="430" height="242" src="https://www.youtube.com/embed/MyCvTSjkD74" title="👩🏼‍💻 What is Bootstrap? / Beginner CSS Framework" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><iframe width="400" height="225" src="https://www.youtube.com/embed/gH32Dj6tVvM" title="POR QUÉ USAR UN FRAMEWORK CSS ( y por qué no usarlo)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    <br><br>
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+       <center> <p>&copy; 2024 Mi página Bootstrap. Todos los derechos reservados.</p>
+        <p><br>
+            <a href="#" class="text-white">Política de privacidad</a> |
+            <br><br>
+            <a href="#" class="text-white">Términos de servicio</a>
+            <br><br><br>
+        </p></center>
+    </footer>
+
+</body>
+</html>
